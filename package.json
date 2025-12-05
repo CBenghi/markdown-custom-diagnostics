@@ -1,0 +1,19 @@
+{
+  "name": "markdown-custom-diagnostics",
+  "version": "0.1.0",
+  "description": "Custom diagnostics for academic markdown",
+  "engines": { "vscode": "^1.50.0" },
+  "main": "extension.js",
+  "activationEvents": [ "onLanguage:markdown" ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "markdown",
+        "extensions": [ ".p.md" ]
+      }
+    ]
+  },
+  "devDependencies": {
+    "vscode": "^1.50.0"
+  }
+}
