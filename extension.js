@@ -1,3 +1,11 @@
+// This is a VSCode extension that provides custom diagnostics for markdown files.
+// It identifies lines containing specific keywords and marks them with different severity levels.
+// 
+// To enable this extension, copy it to your VSCode extensions folder
+// vscode extension folder is located at:
+// - Windows: %USERPROFILE%\.vscode\extensions
+// - macOS/Linux: $HOME/.vscode/extensions
+
 const vscode = require('vscode');
 
 function activate(context) {
@@ -17,7 +25,7 @@ function activate(context) {
 
     const nextRegex = /(\{>>\s*|\(\s*)?\b(NEXT|WORK):\s*(.*)$/i;
     const todoRegex = /(\{>>\s*|\(\s*)?\b(TODO|FIXME|XXX):\s*(.*)$/i;
-    const infoRegex = /(\{>>\s*|\(\s*)?\b(PLAN|INFO):\s*(.*)$/i;
+    const infoRegex = /(\{>>\s*|\(\s*)?\b(PLAN|INFO|DEV|IMPROVE):\s*(.*)$/i;
     var lineCount = 0;
     lines.forEach(thisLine => {
       let match;
